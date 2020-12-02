@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="home" class="back">
+        <div id="navegacion">
+            <nav id="navbar" class="navbar navbar-expand-lg container navbar-light">
+                <img id="logo" src="data:image/png;base64,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"
+                    class="logo" alt="img">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav nav__list">
+                        <li class="nav-item nav__item active">
+                            <a class="nav-link nav__links" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link nav__links" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link nav__links" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link nav__links" href="#clients">Clients</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link nav__links" href="#plans">Plans</a>
+                        </li>
+                        <li class="nav-item nav__item nav__item-free">
+                            <a class="nav-link nav__link" href="#">Try For Free</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+
+        <section class="section__discovery container">
+
+            <div class="discovery">
+                <div class="discover__container">
+                    <p class="discovery__p">DISCOVER INVOZA TODAY</p>
+                    <h1 class="discovery__title">Make your Site Amazing & Unique with <span class="discovery__title-span">Invoza</span></h1>
+                    <p class="discovery__p">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine occidental</p>
+                </div>
+                <div class="discovery__buttons">
+                    <button class="discovery__btn btn__primary">Get Started</button>
+                    <button class="discovery__btn btn__secundary">Learn More</button>
+                </div>
+            </div>
+            <div class="welcome">
+                <form id="formulario" method="post" name="formulario" class="discovery__form">
+                    <div class="discovery__form-container">
+                        <p class="discovery__welcome">WELCOME TO INVOZA</p>
+                        <h3 id="mari" class="discovery__title-form">GET 30 DAYS FREE TRIAL</h3>
+                        <div class="discovery__section-form">
+                            <p class="discovery__p-form">Your Name*</p>
+                            <input id="nombre" name="nombre" class="discovery__input" type="text">
+                        </div>
+                        <div class="discovery__section-form">
+                            <p class="discovery__p-form">Your Email*</p>
+                            <input id="email" name="email" class="discovery__input" type="text">
+                        </div>
+                        <div class="discovery__section-form">
+                            <p class="discovery__p-form">Password*</p>
+                            <input id="password" name="password" class="input" type="text">
+                        </div>
+
+
+                        <button type="submit" name="enviar" value="Enviar" id="enviar" class="discovery__form-btn">
+                            <p class="form_p">Get Started</p>
+                            <i class="fas fa-paper-plane icon__form"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </div>
+    <section id="services" class="services bg-light">
+
+        <div class="services__titles">
+            <h5 class="h5__title">SERVICES</h5>
+            <h3 class="h3__title">Services We Provide</h3>
+            <p class="all__p">It will be as simple as occidental in fact, it will be Occidental.</p>
+        </div>
+        <div class="services__all">
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-th-large service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Bootstrap UI based
+                </h5>
+                <p class="service__p">
+                    To an English person, it will seem like<br/> English as skeptical
+                </p>
+            </div>
+            <!--service-->
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-edit service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Easy to customize
+                </h5>
+                <p class="service__p">
+                    If several languages coalesce, the grammar<br/> of the language.
+                </p>
+            </div>
+            <!--service-->
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-headphones-alt service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Awesome Support
+                </h5>
+                <p class="service__p">
+                    The languages only differ in their grammar<br/> their pronunciation
+                </p>
+            </div>
+            <!--service-->
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-layer-group service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Creative Design
+                </h5>
+                <p class="service__p">
+                    Everyone realizes why a new common <br/>would be desirable
+                </p>
+            </div>
+            <!--service-->
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-code service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Quality Code
+                </h5>
+                <p class="service__p">
+                    To achieve this, it would be necessary to <br/>have uniform.
+                </p>
+            </div>
+            <!--service-->
+            <div class="service">
+                <div class="icon__container">
+                    <i class="fas fa-mobile service__icon"></i>
+                </div>
+                <h5 class="service__title">
+                    Responsive layout
+                </h5>
+                <p class="service__p">
+                    Their separate existence is a myth. For<br/> science, music, etc.
+                </p>
+            </div>
+            <!--service-->
+
+        </div>
+        <button class="service__btn">View More</button>
+        </div>
+    </section>
+    <!--Section Service-->
+    <section id="features" class="section__features container">
+        <div class="services__titles">
+            <h5 class="h5__title">FEATURES</h5>
+            <h3 class="h3__title">Key features of the product</h3>
+            <p class="all__p">It will be as simple as occidental in fact, it will be Occidental.</p>
+        </div>
+        <div class="features container">
+            <div class="features__container">
+                <div class="icon__container">
+                    <i class="far fa-chart-bar service__icon"></i>
+                </div>
+                <h4 class="feature__title">Improve your Marketing business</h4>
+                <p class="features__p">If several languages coalesce, the grammar of the resulting language is more simple and regular.</p>
+                <div class="features__check">
+                    <div class="feature__check">
+                        <i class="fas fa-check icon__check"></i>
+                        <p class="check__p"> Donec quam felis</p>
+                    </div>
+                    <div class="feature__check">
+                        <i class="fas fa-check icon__check"></i>
+                        <p class="check__p">Ultricies nec</p>
+                    </div>
+                </div>
+                <!--Features Check-->
+                <button class="feature__btn"><p class="feature-p">Learn More</p><i class="fas fa-arrow-right icon-arrow"></i></button>
+            </div>
+            <!--Features Container-->
+            <div class="features__container">
+                <div class="features__container-img">
+                    <div class="points__container container">
+                        <i class="fas fa-circle circle-red"></i>
+                        <i class="fas fa-circle circle-yellow"></i>
+                        <i class="fas fa-circle circle-green"></i>
+                    </div>
+                    <img src="grafico.png" alt="graph" class="features__img">
+                </div>
+
+            </div>
+            <div class="features__container">
+                <div class="features__container-img">
+
+                    <div class="points__container container">
+                        <i class="fas fa-circle circle-red"></i>
+                        <i class="fas fa-circle circle-yellow"></i>
+                        <i class="fas fa-circle circle-green"></i>
+                    </div>
+
+                    <img src="trabajo.png" alt="graph2" class="features__img">
+                </div>
+
+            </div>
+            <div class="features__container">
+                <div class="icon__container">
+                    <i class="fas fa-chart-pie service__icon"></i>
+                </div>
+                <h4 class="feature__title">Increase your Marketing Performance</h4>
+                <p class="features__p">If several languages coalesce, the grammar of the resulting language is more simple and regular.</p>
+                <div class="features__check">
+                    <div class="feature__check">
+                        <i class="fas fa-check icon__check"></i>
+                        <p class="check__p">
+                            Donec quam felis
+                        </p>
+                    </div>
+                    <div class="feature__check">
+                        <i class="fas fa-check icon__check"></i>
+                        <p class="check__p">
+                            Ultricies nec
+                        </p>
+                    </div>
+                </div>
+                <!--Features Check-->
+                <button class="feature__btn"><p class="feature-p">Learn More</p><i class="fas fa-arrow-right icon-arrow"></i></button>
+            </div>
+        </div>
+        <!--Features Container-->
+    </section>
+    <!--Features Section-->
+    <section id="clients" class="section__testimonial bg-light">
+        <div class="services__titles container">
+            <h5 class="h5__title">TESTIMONIAL</h5>
+            <h3 class="h3__title">What our Client Say</h3>
+            <p class="all__p">It will be as simple as occidental in fact, it will be Occidental.</p>
+        </div>
+        <div class="testimonials container">
+            <div class="testimonial__quote">
+                <i class="fas fa-quote-left icon__quote"></i>
+                <p class="testimonial__title"> 3,500 + Satisfied Client</p>
+            </div>
+            <div class="testimonials__arrows">
+                <div class="icon__container-point">
+                    <i id="left" class="fas fa-angle-left icon__point customPrevBtn"></i>
+                </div>
+                <div class="icon__container-point">
+                    <i id="right" class="fas fa-angle-right icon__point customNextBtn"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--Carousel-->
+
+        <div class="owl-carousel owl-theme container">
+
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <div class="testimonial__carousel">
+                <div class="item">
+                    <p class="testimonial__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quis ad impedit eaque enim, perspiciatis velit ex officiis totam corporis molestias, eveniet magnam quasi eum odit porro, in vitae dolores.</p>
+                    <div class="testimonial__info">
+                        <h2 class="icon__container">
+                            <p class="info-client">H</p>
+                        </h2>
+                        <div class="info-container">
+                            <h3 class="testimonial__info-name">Henry McElyea</h3>
+                            <p class="testimonial__info-p">- Invoza User</p>
+                        </div>
+                    </div>
+                </div>
+                <!--item-->
+            </div>
+            <!--testimonial Carousel-->
+            <!--Carousel-->
+        </div>
+        <div class="testimonials__logos-container container">
+            <div class="testimonials__logos">
+                <img src="black.png" alt="black" class="testimonial__logo-img">
+
+            </div>
+            <div class="testimonials__logos">
+                <img src="quadra.png" alt="black" class="testimonial__logo-img">
+
+            </div>
+            <div class="testimonials__logos">
+                <img src="essence.png" alt="black" class="testimonial__logo-img">
+
+            </div>
+            <div class="testimonials__logos">
+                <img src="generic.png" alt="black" class="testimonial__logo-img">
+
+            </div>
+        </div>
+        <!--logos-->
+
+    </section>
+    <!--Testimonials Section-->
+    <section class="section__solutions">
+        <div class="solutions__box container">
+            <div class="services__titles container">
+
+                <h3 class="h3__title text-white">Best Solutions for your Business</h3>
+                <p class="all__p text-white">To achieve this, it would be necessary to have uniform grammar, pronunciation and more<br/> common that of the individual languages.</p>
+            </div>
+            <div class="solutions__container">
+                <div class="solutions">
+                    <i class="fas fa-bookmark icon__solutions"></i>
+                    <p class="solutions__number">2581</p>
+                    <p class="solutions__p">Projects</p>
+                </div>
+                <div class="solutions">
+                    <i class="fas fa-user-plus icon__solutions"></i>
+                    <p class="solutions__number">800</p>
+                    <p class="solutions__p">No. of Clients</p>
+                </div>
+                <div class="solutions">
+                    <i class="fas fa-shopping-cart icon__solutions"></i>
+                    <p class="solutions__number">128</p>
+                    <p class="solutions__p">Cups of coffe</p>
+                </div>
+                <div class="solutions">
+                    <i class="fas fa-award icon__solutions"></i>
+                    <p class="solutions__number">47</p>
+                    <p class="solutions__p">Awards</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--Section Solutions-->
+    <section id="plans" class="section__plans bg-light">
+        <div class="services__titles container">
+            <h5 class="h5__title">PRICING</h5>
+            <h3 class="h3__title">Choose your Plan</h3>
+            <p class="all__p">It will be as simple as occidental in fact, it will be Occidental.</p>
+        </div>
+        <div class="plan__time">
+            <button id="month" class="plan__btn back-blue">Monthly</button>
+            <button id="year" class="plan__btn-secundary">Yearly</button>
+        </div>
+        <div class="plans__container">
+            <div class="plan__container">
+                <h3 class="plan__title">Economy</h3>
+                <p class="plan__price">$19/<span class="plan__mo">Mo</span><span class="plan__ye hidden">year</span></p>
+                <button class="plan__join">Join now</button>
+                <p class="plan__p">Brandwidth:<span class="plan__span"> 1GB</span></p>
+                <p class="plan__p">Onlinespace:<span class="plan__span"> 50MB</span></p>
+                <p class="plan__p">Support:<span class="plan__span"> No</span></p>
+            </div>
+            <div class="plan__container">
+                <h3 class="plan__title">Premium</h3>
+                <p class="plan__price">$29/<span class="plan__mo">Mo</span><span class="plan__ye hidden">year</span></p>
+                <button class="plan__join">Join now</button>
+                <p class="plan__p">Brandwidth:<span class="plan__span"> 2GB</span></p>
+                <p class="plan__p">Onlinespace:<span class="plan__span"> 1GB</span></p>
+                <p class="plan__p">Support:<span class="plan__span"> No</span></p>
+            </div>
+            <div class="plan__container">
+                <h3 class="plan__title">Developer</h3>
+                <p class="plan__price">$39/<span class="plan__mo">Mo</span><span class="plan__ye hidden">year</span></p>
+                <button class="plan__join">Join now</button>
+                <p class="plan__p">Brandwidth:<span class="plan__span"> 3GB</span></p>
+                <p class="plan__p">Onlinespace:<span class="plan__span"> 2GB</span></p>
+                <p class="plan__p">Support:<span class="plan__span"> Yes</span></p>
+            </div>
+        </div>
+    </section>
+    <!--Plan Section-->
+    <section class="section__suscribe container">
+        <div class="services__titles container">
+            <h5 class="h5__title">SUBSCRIBE</h5>
+            <h3 class="h3__title">Subscribe to our Newsletter</h3>
+            <p class="all__p">It will be as simple as occidental in fact, it will be Occidental.</p>
+        </div>
+        <div id="suscribes" class="suscribes">
+            <input id="newsletter" class="suscribe__input" placeholder="Enter your E-mail adress">
+            <button id="suscribe" class="suscribe__btn">Suscribe Us</button>
+        </div>
+    </section>
+    <!--Pplan Section-->
+    <footer>
+        <div class="footer__info">
+            <div class="footer__info-container container">
+                <div class="footer__about">
+                    <h5 class="footer__title text-white">
+                        About the invoza
+                    </h5>
+                    <p class="footer__info-p">
+                        The Invoza is a sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem eaque
+                    </p>
+                </div>
+                <div class="footer__about">
+                    <h5 class="footer__title text-white">
+                        Company
+                    </h5>
+                    <p class="footer__info-p-link">About Us</p>
+                    <p class="footer__info-p-link">Media & Press</p>
+                    <p class="footer__info-p-link">Career</p>
+                    <p class="footer__info-p-link">Blog</p>
+                </div>
+                <div class="footer__about">
+                    <h5 class="footer__title text-white">
+                        More Info
+                    </h5>
+                    <p class="footer__info-p-link">Pricing</p>
+                    <p class="footer__info-p-link">For Marketing</p>
+                    <p class="footer__info-p-link">For CEOs</p>
+                    <p class="footer__info-p-link">For Agencies</p>
+                    <p class="footer__info-p-link">Our Apps</p>
+                </div>
+                <div class="footer__about">
+                    <h5 class="footer__title text-white">
+                        Contact
+                    </h5>
+                    <div class="footer__contact">
+                        <i class="fas fa-map-marker-alt icon__footer"></i>
+                        <p class="footer__info-p-contact">
+                            476 University Drive Ridge, IL 61257
+                        </p>
+                    </div>
+                    <div class="footer__contact">
+                        <i class="far fa-envelope icon__footer"></i>
+                        <p class="footer__info-p-contact">
+                            exampleabc@armyspy.com
+                        </p>
+                    </div>
+                    <div class="footer__contact">
+                        <i class="far fa-phone icon__footer"></i>
+                        <p class="footer__info-p-contact">0123-456-789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__created">
+            <div class="created__container container">
+                <img src="data:image/png;base64,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"
+                    alt="logo1" class="logo">
+                <p class="footer__p text-white">2020 © Invoza. Created by Themesdesign</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+
+            margin: 20,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 2,
+                },
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
